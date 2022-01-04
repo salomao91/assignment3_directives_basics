@@ -7,12 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isButtonPressed;
+  buttonPressedNumbers = [];
+  countButtonPressed;
   
   constructor() {
     this.isButtonPressed = false;
+    this.countButtonPressed = 0;
   }
 
   onDisplayButton() {
+    this.countButtonPressed++;
+    this.buttonPressedNumbers.push(this.countButtonPressed);
+
     if (this.isButtonPressed) {
       this.isButtonPressed = false;
     }
