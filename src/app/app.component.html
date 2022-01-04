@@ -12,5 +12,5 @@
   </div>
 </div>
 <hr/>
-<button>Display Details</button>
-<p>Secret Word = tuna</p>
+<button (click) = "onDisplayButton()" >Display Details</button>
+<p *ngIf="isButtonPressed">Secret Word = tuna</p>
