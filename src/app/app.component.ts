@@ -13,6 +13,15 @@ export class AppComponent {
   }
 
   onDisplayButton() {
-    this.isButtonPressed = true;
+    if (this.isButtonPressed) {
+      this.isButtonPressed = false;
+    }
+    else {
+      this.isButtonPressed = true;
+    }
+  }
+
+  offDisplayButton() {
+    this.isButtonPressed = false;
   }
 }
