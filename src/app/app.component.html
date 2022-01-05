@@ -13,5 +13,10 @@
 </div>
 <hr/>
 <button (click) = "onDisplayButton()" >Display Details</button>
-<p *ngIf="isButtonPressed">Secret Word = tuna</p>
-<p *ngFor="let number of buttonPressedNumbers">Button clicked {{ number }} times </p>
+
+<p 
+  *ngFor="let number of buttonPressedNumbers; let indexNumber = index"
+    [ngStyle]="{ backgroundColor: getBackgroundColorByIndex(indexNumber) }"
+    [ngClass]="{ textColor: getTextColorByIndex(indexNumber) }">
+  Button clicked {{ number }} times
+</p>

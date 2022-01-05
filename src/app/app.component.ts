@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { elementAt } from 'rxjs-compat/operator/elementAt';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,18 @@ export class AppComponent {
     }
     else {
       this.isButtonPressed = true;
+    }
+  }
+
+  getBackgroundColorByIndex(indexNumber :number) {
+    if (indexNumber >= 4) {
+      return 'blue';
+    }
+  };
+  
+  getTextColorByIndex(indexNumber :number) {
+    if (indexNumber >= 4) {
+      return 'textColor';
     }
   }
 
