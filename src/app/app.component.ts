@@ -18,7 +18,8 @@ export class AppComponent {
 
   onDisplayButton() {
     this.countButtonPressed++;
-    this.buttonPressedNumbers.push(this.countButtonPressed);
+    // this.buttonPressedNumbers.push(this.countButtonPressed);
+    this.buttonPressedNumbers.push(new Date());
 
     if (this.isButtonPressed) {
       this.isButtonPressed = false;
